@@ -1,0 +1,267 @@
+.node {
+  /* Standard sizing for every node: grow width first, then wrap to new lines */
+  width: 280px;
+  min-width: 280px;
+  max-width: 280px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-node);
+  box-shadow: var(--shadow-node);
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.node:hover {
+  box-shadow: var(--shadow-node-hover);
+}
+
+.nodeSelected {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-node-selected);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--gradient-header);
+  border-radius: var(--radius-node) var(--radius-node) 0 0;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-sm);
+  background: var(--gradient-primary);
+  color: white;
+  flex-shrink: 0;
+}
+
+.title {
+  font-weight: 600;
+  font-size: var(--font-size-body);
+}
+
+.body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.input,
+.select {
+  width: 100%;
+  max-width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: var(--color-bg);
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+  background: var(--color-card);
+}
+
+.description {
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* Auto-resize textarea — wraps long text and grows downward */
+.textarea {
+  width: 100%;
+  max-width: 100%;
+  min-height: 38px;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: var(--color-bg);
+  box-sizing: border-box;
+  resize: none;
+  overflow: hidden;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+  background: var(--color-card);
+}
+
+/* Variable pills row */
+.variablePills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: rgba(79, 70, 229, 0.08);
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  border-radius: 4px;
+}
+
+.description {
+  margin: 0;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* ── File upload widget ── */
+.fileUploadArea {
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  background: var(--color-bg);
+}
+
+.fileUploadArea:hover {
+  border-color: var(--color-primary);
+  background: rgba(79, 70, 229, 0.04);
+}
+
+.fileUploadBtn {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-family);
+  color: var(--color-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0 auto;
+}
+
+.fileUploadHint {
+  margin: 4px 0 0;
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.fileUploading {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+}
+
+/* Uploaded file info card */
+.fileCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+}
+
+.fileCardIcon {
+  font-size: 18px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.fileCardInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.fileCardName {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fileCardMeta {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.fileCardRemove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  padding: 0;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.fileCardRemove:hover {
+  color: var(--color-error);
+}
+
+.uploadSpinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,33 @@
+:root {
+  --color-primary: #4f46e5;
+  --color-primary-dark: #4338ca;
+  --color-secondary: #7c3aed;
+  --color-bg: #f8fafc;
+  --color-card: #ffffff;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-handle-input: #3b82f6;
+  --color-handle-output: #7c3aed;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-size-h1: 24px;
+  --font-size-h2: 18px;
+  --font-size-body: 14px;
+  --font-size-small: 12px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-node: 12px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --shadow-node: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-node-hover: 0 8px 20px rgba(15, 23, 42, 0.12);
+  --shadow-node-selected: 0 0 0 2px var(--color-primary), 0 8px 20px rgba(79, 70, 229, 0.18);
+
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  --gradient-header: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(124, 58, 237, 0.05));
+}

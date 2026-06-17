@@ -1,0 +1,29 @@
+# ===== Environment / secrets (NEVER commit real keys) =====
+.env
+.env.*
+!.env.example
+backend/.env
+*.local
+
+# ===== Python / backend =====
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.sqlite3
+*.db
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ===== Node / frontend =====
+node_modules/
+/frontend/build/
+/frontend/node_modules/
+/backend/node_modules/
+
+# ===== OS / editor =====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
