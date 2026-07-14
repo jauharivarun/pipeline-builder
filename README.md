@@ -1,4 +1,4 @@
-# VectorShift Pipeline Builder
+# Pipeline Builder
 
 A visual workflow builder for creating and validating AI pipelines by connecting nodes on a canvas.
 
